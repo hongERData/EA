@@ -1,4 +1,3 @@
-
 Shapely Value Calculation:
 
 Calculates for a single feature
@@ -23,3 +22,18 @@ Dependence plot: This plot shows the relationship between the value of a particu
 Force plot: This plot shows the SHAP values for each feature in a particular data point, displayed as arrows that indicate the direction and magnitude of the feature's effect on the model output. The plot also includes a base value, which is the average model output for the data set, and a prediction value, which is the model output for the selected data point. This plot helps to explain how the model arrived at a particular prediction for a given data point and how each feature contributed to that prediction.
 
 Interaction plot: This plot shows the interaction between two features and their corresponding SHAP values. The plot displays a scatter plot of one feature against another, with the color of each point indicating the magnitude of the SHAP value. The plot also includes a line that shows the relationship between the two features when all other features are held constant. This plot helps to identify whether two features interact with each other and how that interaction affects the model output.
+
+
+A waterfall plot is a type of visualization that shows how a set of features contribute to the output of a machine learning model. It is commonly used in conjunction with SHAP (SHapley Additive exPlanations) values to help explain the model's predictions. Here is how to interpret a waterfall plot:
+
+Starting point: The starting point of the waterfall plot is the base value, which is the average output of the model for the entire dataset. This is usually represented by a horizontal line at the bottom of the plot.
+
+Feature contributions: The next set of bars in the waterfall plot represent the contribution of each individual feature to the model's output. Each bar can be positive or negative, and the length of the bar represents the magnitude of the feature's contribution. A positive bar indicates that the feature increased the model output, while a negative bar indicates that the feature decreased the model output.
+
+Total contribution: The total contribution of a set of features is the sum of the individual feature contributions. This is represented by a vertical line that connects the end of one bar to the start of the next. The length of the vertical line represents the total contribution of the set of features.
+
+Final prediction: The final bar in the waterfall plot represents the final prediction of the model for the given data point. This is the sum of the base value and the total contributions of all the features. The length of the bar represents the model's final prediction.
+
+Overall, the waterfall plot helps to explain the model's prediction by showing how each feature contributes to the final output. It helps to identify which features had the largest impact on the prediction and how they affected the output. Additionally, the waterfall plot can be used to compare the relative importance of different sets of features in the model, and to identify which features had the most significant impact on the prediction.
+
+
